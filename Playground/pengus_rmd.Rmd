@@ -1,0 +1,23 @@
+---
+title: "Pengus_rmd"
+author: "Aaqib"
+date: "2023-07-04"
+output: html_document
+---
+
+## Setting Up the Environment
+Setting up the Environment by loading the 'tidyverse' and 'palmerpenguins' packages 
+```{r loading packages}
+library('tidyverse')
+library('palmerpenguins')
+data("penguins")
+view(penguins)
+```
+
+```{r Penguin Data Visualization}
+ggplot( data = penguins) + 
+    geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g,color = species))+ 
+    labs(title =  "Palmer Penguins: Body Mass vs Flipper Length",subtitle = 'Sample Of Three Penguins Species',caption = "Data collected by Dr.Baryal Khan Yousafzai")
+
+```
+
